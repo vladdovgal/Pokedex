@@ -2,8 +2,7 @@ package com.jsp.pockedox.repository
 
 import com.jsp.pockedox.model.Pokemon
 
-//https://pokeapi.co/
-//https://bulbapedia.bulbagarden.net/wiki/Bulbasaur_(Pok%C3%A9mon)
+// Fake repository
 val pokemonList = listOf(
     Pokemon("1","Bulbasaur", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"),
     Pokemon("4","Charmander", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"),

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Paddings -->
+    <dimen name="padding_small">7dp</dimen>
     <dimen name="padding_medium">20dp</dimen>
 
     <!--Margins-->
 
-    <!-- Image sizes -->
-    <dimen name="image_poke_size">120dp</dimen>
-
+    <!-- Other sizes -->
+    <dimen name="image_poke_size">100dp</dimen>
+    <dimen name="list_item_pokemon_card_radius">15dp</dimen>
+    <dimen name="card_poke_size">180dp</dimen>
+    <dimen name="medium_font">22sp</dimen>
 </resources>

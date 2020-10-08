@@ -7,6 +7,7 @@ import com.jsp.pockedox.adapters.PokemonRecyclerViewAdapter
 import com.jsp.pockedox.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 class MainActivity : AppCompatActivity() {
 
     private val viewModel = MainViewModel()
@@ -18,11 +19,13 @@ class MainActivity : AppCompatActivity() {
         setUpRecyclerView()
     }
 
-    fun setUpRecyclerView() {
-        val pokemons  = viewModel.pokemons.value
-        rvPokemons.adapter = PokemonRecyclerViewAdapter().also { viewModel.pokemons.value?.let { it1 ->
+    /**
+     * Sets up recycler view with list of pokemons
+     */
+    private fun setUpRecyclerView() {
+        rvPokemons.adapter = PokemonRecyclerViewAdapter().also { viewModel.pokemons.value?.let { _ ->
             it.addAll(
-                pokemons!!
+                viewModel.pokemons.value!!
             )
         } }
     }
