@@ -3,11 +3,9 @@
     <!--Paddings -->
     <dimen name="padding_medium">20dp</dimen>
 
-
     <!--Margins-->
 
-
     <!-- Image sizes -->
-    <dimen name="image_poke_size">80dp</dimen>
+    <dimen name="image_poke_size">120dp</dimen>
 
 </resources>

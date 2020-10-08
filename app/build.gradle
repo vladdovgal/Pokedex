@@ -50,4 +50,6 @@ dependencies {
     // Coil
     implementation("io.coil-kt:coil:0.11.0")
 
+    // Material Design
+    implementation "com.google.android.material:material:$material_version"
 }
