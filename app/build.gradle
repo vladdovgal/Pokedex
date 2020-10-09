@@ -52,4 +52,8 @@ dependencies {
 
     // Material Design
     implementation "com.google.android.material:material:$material_version"
+
+    // Lifecycle Extensions & Lifecycle ViewModel
+    implementation "android.arch.lifecycle:extensions:$arch_lificycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 }

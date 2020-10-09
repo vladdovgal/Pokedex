@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.jsp.pockedox.R
 import com.jsp.pockedox.databinding.ListItemPokemonBinding
-import com.jsp.pockedox.model.Pokemon
+import com.jsp.pockedox.domain.Pokemon
 
 class PokemonRecyclerViewAdapter : BaseRecyclerAdapter<Pokemon, PokemonRecyclerViewAdapter.PokemonViewHolder>() {
 

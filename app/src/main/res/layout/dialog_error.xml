@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/imgErrorDialog"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/padding_medium"
+        android:gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/dialog_error"
+        android:background="@color/dragon"
+        />
+
+    <TextView
+        android:id="@+id/tvErrorDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgErrorDialog"
+        android:layout_margin="@dimen/padding_medium"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_font"
+        tools:text="Message"
+        />
+
+    <Button
+        android:id="@+id/btnErrorDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvErrorDialog"
+        android:layout_margin="@dimen/padding_medium"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
