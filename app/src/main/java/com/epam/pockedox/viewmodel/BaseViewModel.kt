@@ -1,4 +1,4 @@
-package com.jsp.pockedox.viewmodel
+package com.epam.pockedox.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

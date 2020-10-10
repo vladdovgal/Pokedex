@@ -1,6 +1,6 @@
-package com.jsp.pockedox.data
+package com.epam.pockedox.data
 
-import com.jsp.pockedox.domain.Pokemon
+import com.epam.pockedox.domain.Pokemon
 
 // Fake repository
 val pokemonList = listOf(

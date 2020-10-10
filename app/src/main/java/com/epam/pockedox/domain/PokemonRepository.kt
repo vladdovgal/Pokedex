@@ -1,4 +1,4 @@
-package com.jsp.pockedox.domain
+package com.epam.pockedox.domain
 
 interface PokemonRepository {
     fun getPokemonList() : List<Pokemon>

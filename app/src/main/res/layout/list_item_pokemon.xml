@@ -6,7 +6,7 @@
     <data>
         <variable
             name="pokemon"
-            type="com.jsp.pockedox.domain.Pokemon" />
+            type="com.epam.pockedox.domain.Pokemon" />
     </data>
 
     <LinearLayout

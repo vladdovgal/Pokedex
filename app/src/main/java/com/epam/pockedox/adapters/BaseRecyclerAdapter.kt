@@ -1,4 +1,4 @@
-package com.jsp.pockedox.adapters
+package com.epam.pockedox.adapters
 
 import androidx.recyclerview.widget.RecyclerView
 

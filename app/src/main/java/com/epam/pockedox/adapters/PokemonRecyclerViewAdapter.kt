@@ -1,12 +1,12 @@
-package com.jsp.pockedox.adapters
+package com.epam.pockedox.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.jsp.pockedox.R
-import com.jsp.pockedox.databinding.ListItemPokemonBinding
-import com.jsp.pockedox.domain.Pokemon
+import com.epam.pockedox.R
+import com.epam.pockedox.databinding.ListItemPokemonBinding
+import com.epam.pockedox.domain.Pokemon
 
 class PokemonRecyclerViewAdapter : BaseRecyclerAdapter<Pokemon, PokemonRecyclerViewAdapter.PokemonViewHolder>() {
 

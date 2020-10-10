@@ -1,11 +1,11 @@
-package com.jsp.pockedox.view
+package com.epam.pockedox.view
 
 import android.os.Bundle
 import androidx.lifecycle.Observer
-import com.jsp.pockedox.R
-import com.jsp.pockedox.adapters.PokemonRecyclerViewAdapter
-import com.jsp.pockedox.domain.Pokemon
-import com.jsp.pockedox.viewmodel.MainViewModel
+import com.epam.pockedox.R
+import com.epam.pockedox.adapters.PokemonRecyclerViewAdapter
+import com.epam.pockedox.domain.Pokemon
+import com.epam.pockedox.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity<MainViewModel>() {

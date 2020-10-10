@@ -1,9 +1,9 @@
-package com.jsp.pockedox.adapters
+package com.epam.pockedox.adapters
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import coil.api.load
-import com.jsp.pockedox.R
+import com.epam.pockedox.R
 
 @BindingAdapter("image")
 fun loadWithCoil(imageView: ImageView, imageUrl: String){

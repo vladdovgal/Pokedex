@@ -1,4 +1,4 @@
-package com.jsp.pockedox
+package com.epam.pockedox
 
 import org.junit.Test
 

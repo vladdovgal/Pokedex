@@ -1,4 +1,4 @@
-package com.jsp.pockedox.view
+package com.epam.pockedox.view
 
 import android.app.Dialog
 import android.view.Window
@@ -6,8 +6,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import com.jsp.pockedox.R
-import com.jsp.pockedox.viewmodel.BaseViewModel
+import com.epam.pockedox.R
+import com.epam.pockedox.viewmodel.BaseViewModel
 
 /**
  * Class made to generalize all the activities of application

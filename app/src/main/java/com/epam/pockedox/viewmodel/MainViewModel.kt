@@ -1,10 +1,10 @@
-package com.jsp.pockedox.viewmodel
+package com.epam.pockedox.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.jsp.pockedox.data.PokemonRepositoryImpl
-import com.jsp.pockedox.domain.Pokemon
+import com.epam.pockedox.data.PokemonRepositoryImpl
+import com.epam.pockedox.domain.Pokemon
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

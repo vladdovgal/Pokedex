@@ -1,7 +1,7 @@
-package com.jsp.pockedox.data
+package com.epam.pockedox.data
 
-import com.jsp.pockedox.domain.Pokemon
-import com.jsp.pockedox.domain.PokemonRepository
+import com.epam.pockedox.domain.Pokemon
+import com.epam.pockedox.domain.PokemonRepository
 
 class PokemonRepositoryImpl : PokemonRepository {
     override fun getPokemonList(): List<Pokemon> {
