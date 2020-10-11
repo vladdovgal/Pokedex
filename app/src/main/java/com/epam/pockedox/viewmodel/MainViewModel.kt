@@ -23,8 +23,14 @@ class MainViewModel : BaseViewModel() {
                 // imitate data loading
                 delay(3_000)
                 val response = repository.getPokemonList()
-                _pokemonData.value = response
-                errorMessageData.postValue(null)
+                // getting error with probability 0.1
+                if((1..10).random() == 1) {
+                    errorMessageData.postValue("Something went wrong. " +
+                            "\n Try restarting application")
+                } else {
+                    _pokemonData.value = response
+                    errorMessageData.postValue(null)
+                }
             } catch (exception : Exception) {
                 // Show exception to the user
                 exception.printStackTrace()

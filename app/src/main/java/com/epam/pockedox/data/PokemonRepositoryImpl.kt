@@ -5,7 +5,7 @@ import com.epam.pockedox.domain.PokemonRepository
 
 class PokemonRepositoryImpl : PokemonRepository {
     override fun getPokemonList(): List<Pokemon> {
-        // todo loading from room database or RestApi
+        // todo loading from Room or RestApi
         return pokemonList
     }
 }
