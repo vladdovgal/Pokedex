@@ -56,4 +56,11 @@ dependencies {
     // Lifecycle Extensions & Lifecycle ViewModel
     implementation "android.arch.lifecycle:extensions:$arch_lificycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    //retrofit requisites retro+gson
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // Moshi
+    implementation("com.squareup.moshi:moshi-kotlin:1.11.0")
 }

@@ -3,14 +3,14 @@ package com.epam.pockedox.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.epam.pockedox.data.PokemonRepositoryImpl
 import com.epam.pockedox.domain.Pokemon
+import com.epam.pockedox.domain.PokemonRepository
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MainViewModel : BaseViewModel() {
 
-    private val repository = PokemonRepositoryImpl()
+    private val repository = PokemonRepository()
 
     private val _pokemonData = MutableLiveData<List<Pokemon>>()
     val pokemonData : LiveData<List<Pokemon>>
