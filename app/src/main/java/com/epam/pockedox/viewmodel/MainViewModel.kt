@@ -21,7 +21,7 @@ class MainViewModel : BaseViewModel() {
             try {
                 isLoading.postValue(true)
                 // imitate data loading
-                delay(3_000)
+                delay(1_000)
                 val response = repository.getPokemonList()
                 // getting error with probability 0.1
                 if((1..10).random() == 1) {

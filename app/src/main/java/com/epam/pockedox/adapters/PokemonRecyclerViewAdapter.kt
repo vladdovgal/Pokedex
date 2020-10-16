@@ -10,6 +10,12 @@ import com.epam.pockedox.domain.Pokemon
 
 class PokemonRecyclerViewAdapter : BaseRecyclerAdapter<Pokemon, PokemonRecyclerViewAdapter.PokemonViewHolder>() {
 
+    var pokemonOnClickListener: PokemonItemOnClickListener? = null
+
+    interface PokemonItemOnClickListener {
+        fun onClicked(id: String)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder =
         PokemonViewHolder(
             DataBindingUtil.inflate(
@@ -22,10 +28,16 @@ class PokemonRecyclerViewAdapter : BaseRecyclerAdapter<Pokemon, PokemonRecyclerV
 
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
         holder.listItemRecyclerViewPokemonBinding.pokemon = items[position]
+        holder.bindTo(items[position], pokemonOnClickListener)
     }
 
     inner class PokemonViewHolder(val listItemRecyclerViewPokemonBinding : ListItemPokemonBinding) :
             RecyclerView.ViewHolder(listItemRecyclerViewPokemonBinding.root) {
-        // todo onclick listener
+
+        fun bindTo(pokemon: Pokemon, pokemonItemOnClickListener: PokemonItemOnClickListener?) {
+            itemView.setOnClickListener {
+                pokemonOnClickListener?.onClicked(pokemon.id)
+            }
+        }
     }
 }

@@ -26,6 +26,12 @@ class MainActivity : BaseActivity<MainViewModel>() {
         viewModel.pokemonData.observe(this, Observer { data ->
             setUpPokemonRecyclerView(data)
         })
+
+        adapter.pokemonOnClickListener = object : PokemonRecyclerViewAdapter.PokemonItemOnClickListener {
+            override fun onClicked(id: String) {
+                PokemonDetailsActivity.openDetails(this@MainActivity, id)
+            }
+        }
     }
 
     /**
