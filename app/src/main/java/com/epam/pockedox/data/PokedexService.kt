@@ -11,7 +11,7 @@ interface PokedexService {
     @GET("pokemon")
     fun getPokemonList(
         @Query("limit") limit : Int = 30,
-        @Query("offset") offset : Int = 0
+        @Query("offset") offset : Int = 5
     ) : Call<PokemonListResponse>
 
     @GET("pokemon/{name}")

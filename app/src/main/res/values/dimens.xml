@@ -6,10 +6,14 @@
 
     <!--Margins-->
 
+    <!--Fonts-->
+    <dimen name="medium_font">22sp</dimen>
+    <dimen name="large_font">30sp</dimen>
+
     <!-- Other sizes -->
     <dimen name="image_poke_size">100dp</dimen>
     <dimen name="list_item_pokemon_card_radius">15dp</dimen>
     <dimen name="pokemon_details_card_radius">40dp</dimen>
     <dimen name="card_poke_size">180dp</dimen>
-    <dimen name="medium_font">22sp</dimen>
+    <dimen name="image_large">300dp</dimen>
 </resources>
