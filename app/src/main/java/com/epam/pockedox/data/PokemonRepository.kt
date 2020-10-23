@@ -1,8 +1,7 @@
-package com.epam.pockedox.domain
+package com.epam.pockedox.data
 
 import android.util.Log
-import com.epam.pockedox.data.PokedexApi
-import com.epam.pockedox.data.PokedexService
+import com.epam.pockedox.domain.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -10,9 +9,9 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
-class PokemonRepository {
+class PokemonRepository(private val api : PokedexService ) {
 
-    private val api : PokedexService = PokedexApi.createPokedexService()
+//    private val api : PokedexService = PokedexApi.createPokedexService()
 
     suspend fun getPokemonList(): List<Pokemon> {
         return suspendCoroutine { continuation ->

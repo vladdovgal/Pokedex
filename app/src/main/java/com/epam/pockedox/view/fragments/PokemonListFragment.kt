@@ -9,9 +9,11 @@ import com.epam.pockedox.adapters.PokemonRecyclerViewAdapter
 import com.epam.pockedox.domain.Pokemon
 import com.epam.pockedox.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_pokemon_list.*
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class PokemonListFragment : BaseFragment<MainViewModel>(R.layout.fragment_pokemon_list) {
-    override val viewModel = MainViewModel()
+
+    override val viewModel by viewModel<MainViewModel>()
     private val adapter = PokemonRecyclerViewAdapter()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

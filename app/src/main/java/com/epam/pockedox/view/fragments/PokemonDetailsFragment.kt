@@ -9,10 +9,11 @@ import com.epam.pockedox.R
 import com.epam.pockedox.domain.PokemonDetails
 import com.epam.pockedox.viewmodel.PokemonDetailsViewModel
 import kotlinx.android.synthetic.main.fragment_pokemon_details.*
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class PokemonDetailsFragment : BaseFragment<PokemonDetailsViewModel>(R.layout.fragment_pokemon_details) {
 
-    override val viewModel = PokemonDetailsViewModel()
+    override val viewModel by viewModel<PokemonDetailsViewModel>()
     private val navArgs by navArgs<PokemonDetailsFragmentArgs>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
