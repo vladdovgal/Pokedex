@@ -4,14 +4,15 @@ package com.epam.pockedox.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.epam.pockedox.data.PokemonRepository
 import com.epam.pockedox.domain.PokemonDetails
-import com.epam.pockedox.domain.PokemonRepository
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.koin.java.KoinJavaComponent
 
 class PokemonDetailsViewModel : BaseViewModel() {
 
-    val repository: PokemonRepository = PokemonRepository()
+    private val repository by KoinJavaComponent.inject(PokemonRepository::class.java)
 
     private val _pokemonDetailsLiveData = MutableLiveData<PokemonDetails>()
     val pokemonDetailsLiveData: LiveData<PokemonDetails> = _pokemonDetailsLiveData
