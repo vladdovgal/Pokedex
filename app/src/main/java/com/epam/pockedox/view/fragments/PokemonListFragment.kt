@@ -1,9 +1,7 @@
 package com.epam.pockedox.view.fragments
 
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
 import com.epam.pockedox.R
 import com.epam.pockedox.adapters.PokemonRecyclerViewAdapter
@@ -17,6 +15,11 @@ class PokemonListFragment : BaseFragment<MainViewModel>(R.layout.fragment_pokemo
     override val viewModel by viewModel<MainViewModel>()
     private val adapter = PokemonRecyclerViewAdapter()
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        loadPokemonList()
+        super.onCreate(savedInstanceState)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         rvPokemons.adapter = adapter
@@ -25,17 +28,15 @@ class PokemonListFragment : BaseFragment<MainViewModel>(R.layout.fragment_pokemo
     }
 
     private fun setUpToolbar() {
-        val toolbar: Toolbar? = activity?.findViewById(R.id.toolbar)
-        toolbar?.navigationIcon = null
-        toolbar?.background = ColorDrawable(resources.getColor(R.color.colorPrimary))
-        toolbar?.title = resources.getString(R.string.app_name)
+        toolbar.apply {
+            navigationIcon = null
+            title = resources.getString(R.string.app_name)
+        }
         val window = activity?.window
         window?.statusBarColor = resources.getColor(R.color.colorPrimary)
     }
 
     private fun observeData() {
-        viewModel.loadPokemonList()
-
         viewModel.pokemonData.observe(viewLifecycleOwner, { data ->
             setUpPokemonRecyclerView(data)
         })
@@ -57,5 +58,9 @@ class PokemonListFragment : BaseFragment<MainViewModel>(R.layout.fragment_pokemo
                 it.addAll(data)
             }
         }
+    }
+
+    private fun loadPokemonList() {
+        viewModel.loadPokemonList()
     }
 }

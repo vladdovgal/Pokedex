@@ -3,7 +3,6 @@ package com.epam.pockedox.view.fragments
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import coil.api.load
@@ -13,7 +12,9 @@ import com.epam.pockedox.viewmodel.PokemonDetailsViewModel
 import kotlinx.android.synthetic.main.fragment_pokemon_details.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
-
+/**
+ * Class which represents Fragment which displays details about pokemon
+ */
 class PokemonDetailsFragment : BaseFragment<PokemonDetailsViewModel>(R.layout.fragment_pokemon_details) {
 
     override val viewModel by viewModel<PokemonDetailsViewModel>()
@@ -27,11 +28,14 @@ class PokemonDetailsFragment : BaseFragment<PokemonDetailsViewModel>(R.layout.fr
     }
 
     private fun setUpToolbar() {
-        val toolbar: Toolbar? = activity?.findViewById(R.id.toolbar)
-        toolbar?.setNavigationIcon(R.drawable.ic_back)
-        toolbar?.background = ColorDrawable(resources.getColor(R.color.dragon))
-        toolbar?.title = ""
-        toolbar?.setNavigationOnClickListener { requireActivity().onBackPressed() }
+        toolbar.apply {
+            setNavigationIcon(R.drawable.ic_back)
+            background = ColorDrawable(resources.getColor(R.color.dragon))
+            title = ""
+            setNavigationOnClickListener {
+                requireActivity().onBackPressed()
+            }
+        }
         val window = activity?.window
         window?.statusBarColor = resources.getColor(R.color.dragon)
     }
@@ -42,12 +46,12 @@ class PokemonDetailsFragment : BaseFragment<PokemonDetailsViewModel>(R.layout.fr
 
         viewModel.pokemonDetailsLiveData.observe(viewLifecycleOwner, Observer { pokemonDetails ->
             if (pokemonDetails != null) {
-                showPokemonDetails(pokemonDetails)
+                loadPokemonDataInViews(pokemonDetails)
             }
         })
     }
 
-    private fun showPokemonDetails(pokemon: PokemonDetails) {
+    private fun loadPokemonDataInViews(pokemon: PokemonDetails) {
         tvName.text = pokemon.name
         image.load(pokemon.imageUrl)
 
