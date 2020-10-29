@@ -5,7 +5,6 @@ It is a simple Android demo app.
 <p align="center">
 
   <a href="https://android-arsenal.com/api?level=24"><img alt="Min SDK" src="https://img.shields.io/badge/API-24%2B-brightgreen.svg?style=flat"/></a>
-  <a href="https://android-arsenal.com/api?level=30"><img alt="Target SDK" src="https://img.shields.io/badge/API-30%2B-brightgreen.svg?style=flat"/></a></p>
 
 ## Technologies stack
 - Kotlin 1.3.72
@@ -27,4 +26,8 @@ It is a simple Android demo app.
 
 </p>
 
-<img src="https://user-images.githubusercontent.com/39419270/97574365-cbb02c80-19f3-11eb-8b30-400f92f3343a.gif" />
+<p align="center">
+
+<img src="https://user-images.githubusercontent.com/39419270/97574365-cbb02c80-19f3-11eb-8b30-400f92f3343a.gif" width="250/>
+
+</p>
