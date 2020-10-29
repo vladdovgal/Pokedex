@@ -73,4 +73,7 @@ dependencies {
     // Koin for Android
     implementation "org.koin:koin-android:$koin_version"
     implementation "org.koin:koin-android-viewmodel:$koin_version"
+
+    //ProgressView
+    implementation "com.github.skydoves:progressview:1.1.0"
 }

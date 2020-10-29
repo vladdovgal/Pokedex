@@ -36,7 +36,7 @@ class PokemonRecyclerViewAdapter : BaseRecyclerAdapter<Pokemon, PokemonRecyclerV
 
         fun bindTo(pokemon: Pokemon, pokemonItemOnClickListener: PokemonItemOnClickListener?) {
             itemView.setOnClickListener {
-                pokemonOnClickListener?.onClicked(pokemon.id)
+                pokemonItemOnClickListener?.onClicked(pokemon.id)
             }
         }
     }

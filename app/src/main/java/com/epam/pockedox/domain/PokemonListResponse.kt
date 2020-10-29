@@ -16,6 +16,8 @@ val PokemonPartialInfo.imageUrl: String
 data class PokemonInfoResponse(
     val id: String,
     val name: String,
+    val height: Int,
+    val weight: Int,
     val abilities: List<Ability>
 ) {
     data class Ability(
@@ -28,6 +30,3 @@ data class PokemonInfoResponse(
         val url: String
     )
 }
-
-val PokemonInfoResponse.imageUrl: String
-    get() = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$id.png"

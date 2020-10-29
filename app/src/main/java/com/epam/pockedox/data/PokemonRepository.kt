@@ -11,8 +11,6 @@ import kotlin.coroutines.suspendCoroutine
 
 class PokemonRepository(private val api : PokedexService ) {
 
-//    private val api : PokedexService = PokedexApi.createPokedexService()
-
     suspend fun getPokemonList(): List<Pokemon> {
         return suspendCoroutine { continuation ->
             api.getPokemonList().enqueue(object : Callback<PokemonListResponse> {
@@ -32,6 +30,7 @@ class PokemonRepository(private val api : PokedexService ) {
                 }
 
                 override fun onFailure(call: Call<PokemonListResponse>, t: Throwable) {
+                    continuation.resumeWithException(Exception("Server responses with error"))
                     Log.e("myLogs", "PokemonRepository : Response failure")
                 }
             })
@@ -47,8 +46,13 @@ class PokemonRepository(private val api : PokedexService ) {
                 ) {
                     val pokemonInfo = response.body()
                     if (response.isSuccessful && pokemonInfo != null) {
-                        val abilities = pokemonInfo.abilities.map { it.ability.name }
-                        val pokemon = PokemonDetails(pokemonInfo.id, pokemonInfo.name, pokemonInfo.imageUrl,abilities)
+                        val pokemon = PokemonDetails(
+                            pokemonInfo.id,
+                            pokemonInfo.name,
+                            pokemonInfo.imageUrl,
+                            pokemonInfo.height,
+                            pokemonInfo.weight
+                        )
                         continuation.resume(pokemon)
                     } else {
                         // server response with error
