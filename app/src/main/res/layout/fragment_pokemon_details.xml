@@ -43,7 +43,8 @@
         android:layout_marginTop="@dimen/padding_medium"
         android:textColor="@color/white"
         android:textSize="@dimen/large_font"
-        android:textStyle="bold"
+        android:fontFamily="@font/pokemon_solid"
+        android:letterSpacing="0.2"
         tools:text="Pokemon Name"
         app:layout_constraintTop_toBottomOf="@id/pokemon_image_card"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,11 +54,12 @@
 
     <TextView
         android:id="@+id/tvWeight"
-        android:layout_width="120dp"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="@dimen/medium_font"
+        android:fontFamily="@font/roboto_mono"
         android:background="@drawable/card_pokemon_parameter"
         android:gravity="center_horizontal"
         android:padding="5dp"
@@ -70,13 +72,14 @@
 
     <TextView
         android:id="@+id/tvHeights"
-        android:layout_width="120dp"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="@dimen/medium_font"
         android:background="@drawable/card_pokemon_parameter"
         android:gravity="center_horizontal"
+        android:fontFamily="@font/roboto_mono"
         android:padding="5dp"
         android:backgroundTint="@color/water"
         app:layout_constraintTop_toTopOf="@id/tvWeight"
@@ -91,6 +94,7 @@
         android:text="@string/base_stats"
         android:textColor="@color/white"
         android:textSize="@dimen/medium_font"
+        android:fontFamily="@font/roboto_mono_medium"
         android:layout_marginTop="@dimen/margin_large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,6 +111,7 @@
         android:text="@string/hp"
         android:textColor="@color/white"
         android:textStyle="bold"
+        android:fontFamily="@font/roboto_mono"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stats_title"
         />
@@ -127,6 +132,7 @@
         app:progressView_labelColorOuter="@color/black"
         app:progressView_labelSize="@dimen/small_font"
         app:progressView_radius="12dp"
+        android:fontFamily="@font/roboto_mono"
         />
 
     <TextView
@@ -140,6 +146,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hp"
+        android:fontFamily="@font/roboto_mono"
         />
 
     <com.skydoves.progressview.ProgressView
@@ -156,7 +163,9 @@
         app:progressView_labelColorInner="@color/white"
         app:progressView_labelColorOuter="@color/black"
         app:progressView_labelSize="@dimen/small_font"
-        app:progressView_radius="12dp" />
+        app:progressView_radius="12dp"
+        android:fontFamily="@font/roboto_mono"
+        />
 
     <TextView
         android:id="@+id/defense"
@@ -168,7 +177,9 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/attack" />
+        app:layout_constraintTop_toBottomOf="@+id/attack"
+        android:fontFamily="@font/roboto_mono"
+        />
 
     <com.skydoves.progressview.ProgressView
         android:id="@+id/progress_defence"
@@ -184,7 +195,9 @@
         app:progressView_labelColorInner="@color/white"
         app:progressView_labelColorOuter="@color/black"
         app:progressView_labelSize="@dimen/small_font"
-        app:progressView_radius="12dp" />
+        app:progressView_radius="12dp"
+        android:fontFamily="@font/roboto_mono"
+        />
 
     <TextView
         android:id="@+id/speed"
@@ -196,7 +209,9 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/defense" />
+        app:layout_constraintTop_toBottomOf="@+id/defense"
+        android:fontFamily="@font/roboto_mono"
+        />
 
     <com.skydoves.progressview.ProgressView
         android:id="@+id/progress_speed"
@@ -212,7 +227,9 @@
         app:progressView_labelColorInner="@color/white"
         app:progressView_labelColorOuter="@color/black"
         app:progressView_labelSize="@dimen/small_font"
-        app:progressView_radius="12dp" />
+        app:progressView_radius="12dp"
+        android:fontFamily="@font/roboto_mono"
+        />
 
     <TextView
         android:id="@+id/exp"
@@ -224,7 +241,9 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/speed" />
+        app:layout_constraintTop_toBottomOf="@+id/speed"
+        android:fontFamily="@font/roboto_mono"
+        />
 
     <com.skydoves.progressview.ProgressView
         android:id="@+id/progress_experience"
@@ -240,7 +259,8 @@
         app:progressView_labelColorInner="@color/white"
         app:progressView_labelColorOuter="@color/black"
         app:progressView_labelSize="@dimen/small_font"
-      app:progressView_radius="12dp" />
+        app:progressView_radius="12dp"
+        android:fontFamily="@font/roboto_mono"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
