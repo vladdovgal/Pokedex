@@ -28,6 +28,6 @@ It is a simple Android demo app.
 
 <p align="center">
 
-<img src="https://user-images.githubusercontent.com/39419270/97574365-cbb02c80-19f3-11eb-8b30-400f92f3343a.gif" width="250/>
+<img src="https://user-images.githubusercontent.com/39419270/97574365-cbb02c80-19f3-11eb-8b30-400f92f3343a.gif" width="250"/>
 
 </p>
